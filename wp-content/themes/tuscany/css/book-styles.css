@@ -1,0 +1,230 @@
+body {
+	background-color: gray;
+}
+
+/* Booklet jQuery Plugin Style*/
+.booklet{
+	-moz-box-shadow:0px 0px 1px #fff;
+	-webkit-box-shadow:0px 0px 1px #fff;
+	box-shadow:0px 0px 1px #fff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+.booklet .b-wrap-left  {
+	background:#f0ece0;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.booklet .b-wrap-right {
+	background:#f0ece0;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.booklet .b-counter {
+	bottom:10px;
+	position:absolute;
+	display:block;
+	width:90%;
+	height:20px;
+	border-top:1px solid #ddd;
+	color:#222;
+	text-align:center;
+	font-size:12px;
+	padding:5px 0 0;
+	background:transparent;
+	-moz-box-shadow:0px -1px 1px #fff;
+	-webkit-box-shadow:0px -1px 1px #fff;
+	box-shadow:0px -1px 1px #fff;
+	opacity:0.8;
+}
+.book_wrapper{
+	margin:0 auto;
+	padding-top:40px;
+	width:808px;
+	height:572px;
+	position:relative;
+	background:transparent url(../img/book.png) no-repeat -9px center;
+	z-index: 10;
+}
+.book_wrapper * {
+	box-sizing: content-box;
+}
+.book-recipe-wrapper {
+	position: relative;
+}
+.book-recipe-wrapper > img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+.book-recipe-wrapper > img:nth-child(1) {
+	right: 85%;
+	left: auto;
+}
+.book-recipe-wrapper > img:nth-child(2) {
+	top: 85%;
+	left: 95%;
+}
+.book-recipe-wrapper > img:nth-child(3) {
+	top: 10%;
+	left: 18%;
+}
+.book-recipe-wrapper > img:nth-child(4) {
+	left: 20%;
+	top: 90%;
+}
+.book-recipe-wrapper > img:nth-child(5) {
+	left: 80%;
+	top: 30%;
+}
+.book_wrapper h1{
+	color:#13386a;
+	margin:5px 5px 5px 15px;
+	font-size:26px;
+	background:transparent url(../img/h1.png) no-repeat bottom left;
+	padding-bottom:7px;
+}
+.book_wrapper p{
+	font-size:16px;
+	margin:5px 5px 5px 15px;
+}
+.book_wrapper a.article,
+.book_wrapper a.demo{
+	background:transparent url(../img/circle.png) no-repeat 50% 0px;
+	display:block;
+	width:95px;
+	height:41px;
+	text-decoration:none;
+	outline:none;
+	font-size:16px;
+	color:#555;
+	float:left;
+	line-height:41px;
+	padding-left:47px;
+}
+.book_wrapper a.demo{
+	margin-left:50px;
+}
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+	background-position:50% -41px;
+	color:#13386a;
+}
+a#next_page_button,
+a#prev_page_button{
+	display:none;
+	position:absolute;
+	width:65px;
+	height:61px;
+	cursor:pointer;
+	margin-top:-32px;
+	top:50%;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+a#prev_page_button{
+	left:-75px;
+	background-image: url(../img/button-left.png);
+}
+a#next_page_button{
+	right:-75px;
+	background-image: url(../img/button-right.png);
+}
+a#next_page_button:hover, a#prev_page_button:hover {
+	background-position: center bottom;
+}
+.book_wrapper .loading{
+	width:160px;
+	height:56px;
+	position: absolute;
+	top:50%;
+	margin-top:-28px;
+	right:135px;
+	line-height:56px;
+	color:#fff;
+	padding-left:60px;
+	font-size:15px;
+	background: #000 url(../img/ajax-loader.gif) no-repeat 10px 50%;
+	opacity: 0.7;
+	z-index:9999;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+#mybook ul, .recipes-slider-mobile {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 20px;
+}
+
+#mybook ul li, .recipes-slider-mobile li {
+	padding: 5px 0;
+	position: relative;
+	list-style: none;
+}
+
+#mybook ul li a, .recipes-slider-mobile li a {
+	font-size: 29px;
+	color: #000000;
+	font-family: 'AmaticBold', sans-serif;
+}
+
+#mybook ul li a:hover, .recipes-slider-mobile li a:hover {
+	color: #f99d28;
+}
+
+#mybook .meal-name, .recipes-slider-mobile .meal-name {
+	float: left;
+	clear: both;
+	margin-right: 2px;
+}
+
+#mybook .meal-price, .recipes-slider-mobile .meal-price {
+	overflow: hidden;
+  text-align: right;
+  position: relative;
+    text-shadow: 0    1px 0 #f0ece0,
+               0    2px 0 #f0ece0,
+               1px  1px 0 #f0ece0,
+               1px  2px 0 #f0ece0,
+              -1px  1px 0 #f0ece0,
+              -1px  2px 0 #f0ece0,
+              -2px  1px 0 #f0ece0,
+              -2px  2px 0 #f0ece0,
+               0   -1px 0 #f0ece0,
+               0   -2px 0 #f0ece0,
+               1px -1px 0 #f0ece0,
+               1px -2px 0 #f0ece0,
+              -1px -1px 0 #f0ece0,
+              -1px -2px 0 #f0ece0,
+              -2px -1px 0 #f0ece0,
+              -2px -2px 0 #f0ece0;
+              z-index: 2;
+}
+
+#mybook .meal-price:after, .recipes-slider-mobile .meal-price:after {
+    content:"";
+    border-bottom: 2px dotted;
+    display: block;
+    height: 0;
+    position: relative;
+    top: -11px;
+    z-index: -1;
+}
