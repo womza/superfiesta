@@ -13,7 +13,7 @@ get_header(); ?>
         <div class="divider"></div>
         <div class="title-wrapp">
             <div>
-                <h2><?php printf( __( 'Results for: %s', 'tuscany' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+                <h2><?php printf( __( 'Resultados para: %s', 'tuscany' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
             </div>
         </div>
     </div>
