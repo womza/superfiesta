@@ -55,6 +55,8 @@
                                                 'terms' => $category->slug
                                         )
                                      ),
+                                    'orderby' => 'menu_order',  // order by Menu Order
+                                    'order' => 'DESC',
                                     'posts_per_page' => 10
                                     );
                                     $query = get_posts($args);
