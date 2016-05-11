@@ -306,3 +306,6 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_simple_add_to_cart', 'woocommerce_simple_add_to_cart', 30 );
 
 remove_action( 'woocommerce_grouped_add_to_cart', 'woocommerce_grouped_add_to_cart', 30 );
+
+//display 16 products per page
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
