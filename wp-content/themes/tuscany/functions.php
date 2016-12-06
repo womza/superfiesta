@@ -377,19 +377,21 @@ function woocommerce_product_subcategories( $args = array() ) {
 	// run each term for find subcategories
 	$product_subcategories = array();
 	for ($i = 0; $i < count($terms_id); $i++) {
-		$product_subcategories[$i] = get_categories( apply_filters( 'woocommerce_product_subcategories_args', array(
-			'child_of'       => (int) $terms_id[$i],
-			'menu_order'   => 'ASC',
-			'hide_empty'   => 0,
-			'hierarchical' => 1,
-			'taxonomy'     => 'product_cat',
-			'pad_counts'   => 1
-		) ) );
-		if (empty($product_subcategories[$i])) {
-			unset($product_subcategories[$i]);
+		if ($terms_id[$i] != 46) {	// avoid show subcategory of hamburger
+			$product_subcategories[$i] = get_categories( apply_filters( 'woocommerce_product_subcategories_args', array(
+				'child_of'       => (int) $terms_id[$i],
+				'menu_order'   => 'ASC',
+				'hide_empty'   => 0,
+				'hierarchical' => 1,
+				'taxonomy'     => 'product_cat',
+				'pad_counts'   => 1
+			) ) );
+			if (empty($product_subcategories[$i])) {
+				unset($product_subcategories[$i]);
+			}
 		}
 	}
-
+	
 	// save master array
 	$product_categories = array();
 	foreach ($terms_id as $id => $term) {
